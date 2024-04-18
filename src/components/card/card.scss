@@ -1,0 +1,82 @@
+.gallery {
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    width: 90%;
+    border-radius: 2rem;
+    padding: 3rem 2rem 2rem 2rem;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 768px) {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        flex-direction: column;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.card {
+    border-radius: 10px;
+    position: relative;
+    height: 340px;
+    width: 30%;
+    transition: transform 0.2s ease-out;
+
+    @media screen and (max-width: 768px) {
+        height: 255px;
+        width: 100%;
+    }
+
+    &:hover {
+        transform: scale(1.025);
+
+        @media screen and (max-width: 768px) {
+            transform: none;
+        }
+    }
+
+    &:active {
+        transform: scale(1.015);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        pointer-events: none; // Évitez de bloquer les interactions utilisateur avec cette superposition
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    h2 {
+        position: absolute;
+        color: white;
+        left: 0;
+        bottom: 0;
+        margin: 20px;
+        font-size: 18px;
+        max-width: 40%;
+        font-weight: bold;
+        z-index: 10;
+    }
+}

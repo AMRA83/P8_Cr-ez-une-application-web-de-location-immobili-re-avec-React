@@ -1,36 +1,24 @@
-
 import React from 'react';
-
-import Home from './pages/Home/Home';
-import Error404 from './pages/Error404/Error404';
-import About from './pages/About/About';
-import Accomodation from './pages/Accomodation/Accomodation';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-const router = createBrowserRouter([
-  {
-    path: "/Kasa",
-    element: <Home />
-  },
-  {
-    path: "/Accomodation/:id",
-    element: <Accomodation />
-  },
-  {
-    path: '/About',
-    element: <About />
-  },
-  {
-    path: "*",
-    element: <Error404 />
-  },
-]);
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from '../src/pages/Home/Home';
+import About from '../src/pages/about/About';
+import Accommodation from '../src/pages/accommodation/Accommodation';
+import Error404 from '../src/pages/Error404/Error404';
+import Footer from './components/footer/Footer';
+import Header from './components/Header/Header';
+import './App.css'
 function App() {
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/accommodation/:id" element={<Accommodation />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

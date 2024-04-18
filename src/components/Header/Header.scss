@@ -1,6 +1,26 @@
-.header {
-    background-color: aqua;
-    color: black;
+header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    width: 90%;
+
+    @media screen and (max-width:768px) {
+        margin: 10px 20px 0 20px;
+    }
+
+    .img_logo {
+        width: 211px;
+        height: auto;
+
+        @media screen and (max-width:768px) {
+            width: 100px;
+            height: auto;
+        }
+
+
+    }
+
 }
