@@ -2,21 +2,22 @@
     position: relative;
     width: 95%;
     border-radius: 25px;
-    overflow: hidden;
-    margin: 43px auto;
+
+    margin: 43px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    aspect-ratio: 16/9;
 
-    @media screen and (max-width: 500px) {
+    height: 460px;
+
+    @media screen and (max-width: 768px) {
         margin: 20px auto;
     }
 
     &_arrow {
         position: absolute;
         top: 50%;
-        height: 10%;
+        height: 40%;
         transform: translateY(-50%);
         cursor: pointer;
 

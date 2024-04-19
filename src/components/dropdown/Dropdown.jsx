@@ -1,27 +1,25 @@
 import React, { useState } from 'react';
 import '../dropdown/dropdown.scss';
-import arrow from '../dropdown/arrow.svg';
+import arrow_icon from '../dropdown/arrow.svg';
 
 function Dropdown({ title, content }) {
-    const [toggle, setToggle] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className="dropdown">
-            <h3 className='dropdown_title' onClick={() => setToggle(!toggle)}>
-                {title}
+        <div className="dropdown-container">
+            <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
+                <span className="dropdown-title">{title}</span>
                 <img
-                    className={toggle ? 'arrow arrow_up' : 'arrow arrow_down'}
-                    src={arrow}
-                    alt="show content"
+                    src={arrow_icon}
+                    alt="Arrow Icon"
+                    className={`dropdown-arrow ${isOpen ? "rotated" : ""}`}
                 />
-            </h3>
-            <div className={toggle ? 'dropdown_content' : 'dropdown_content_hidden'}>
-                {Array.isArray(content) ? content.map((item, index) => (
-                    <p key={index}>{item}</p>
-                )) : content}
+            </button>
+            <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
+                {content}
             </div>
         </div>
-    );
+    )
 }
 
-export default Dropdown;
+export default Dropdown
