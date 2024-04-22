@@ -5,12 +5,12 @@ import './../../pages/Home/Home.scss'
 
 function Home() {
     return (
-        <div className='home'>
+        <main className='home'>
 
             <Banner />
             <Card />
 
-        </div>
+        </main>
     )
 }
 

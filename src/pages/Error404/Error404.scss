@@ -1,30 +1,37 @@
 .Error404 {
     max-width: 95%;
-    margin: 0 auto;
-    padding-bottom: 40px;
+    max-height: 1213px;
+    margin-bottom: 7rem;
     color: #FF6060;
 
     &_infos {
-
+        margin-bottom: 5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: calc(100vh - 250px);
 
         &_title {
             font-weight: 700;
-            font-size: 288px;
+            font-size: 200px;
 
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 768px) {
                 font-size: 140px;
             }
         }
 
         &_content {
             font-weight: 500;
-            font-size: clamp(20px, 4vw, 36px);
+            font-size: 36px;
             text-align: center;
+
+            @media screen and (max-width: 768px) {
+                font-size: 26.5px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         &_return {
@@ -33,23 +40,21 @@
             width: fit-content;
             margin: 0 auto;
             font-weight: 500;
-            font-size: clamp(12px, 2.5vw, 18px);
+            font-size: 18px;
+            margin-bottom: 5rem;
 
-            &:hover::after {
-                width: 100%;
+            &:hover {
+                border-bottom-color: #FF6060;
+                border-bottom-width: 2px;
+                border-bottom-style: solid;
             }
 
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -5px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 0;
-                height: 2px;
-                background-color: #FF6060;
-                transition: width 0.2s ease-in-out;
-            }
         }
     }
+}
+
+a {
+
+    color: black;
+
 }

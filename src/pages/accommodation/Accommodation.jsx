@@ -2,7 +2,7 @@ import '../accommodation/accommodation.scss'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import datas from '../../data/data.json'
-
+import "../../components/dropdown/dropdown.scss"
 import Carousel from "../../components/carousel/Carousel";
 
 import Dropdown from "../../components/dropdown/Dropdown";
@@ -23,7 +23,7 @@ function Accommodation() {
         }
     }, [id, dataCurrentAccommodation]);
 
-    if (!dataCurrentAccommodation) {
+    if (dataCurrentAccommodation === undefined) {
         return <Error404 />;
     }
 
@@ -31,12 +31,14 @@ function Accommodation() {
     const rating = dataCurrentAccommodation.rating;
     const description = dataCurrentAccommodation.description;
     const equipments = dataCurrentAccommodation.equipments;
-
+    const equipmentList = equipments.map(equipment => (
+        <span key={equipment}>{equipment}<br /></span>
+    ))
     return (
-        <div className='accomodation_wrapper'>
+        <main className='accomodation_wrapper'>
 
             <Carousel imageSlider={imageSlider} />
-            <main className="accomodation">
+            <section className="accomodation">
                 <div className="accomodation_content">
                     <div className="accomodation_content_infos">
                         <h1>{dataCurrentAccommodation.title}</h1>
@@ -63,15 +65,15 @@ function Accommodation() {
                 </div>
                 <div className="accomodation_dropdown">
                     <div className="accomodation_dropdown_item">
-                        <Dropdown title={'Description'} content={description} />
+                        <Dropdown className="dropdown-container dropdown-container_accommodation" title={'Description'} content={description} />
                     </div>
                     <div className="accomodation_dropdown_item">
-                        <Dropdown title={'Équipements'} content={equipments} />
+                        <Dropdown className="dropdown-container dropdown-container_accommodation" title={'Équipements'} content={equipmentList} />
                     </div>
                 </div>
-            </main>
+            </section>
 
-        </div>
+        </main>
     )
 }
 

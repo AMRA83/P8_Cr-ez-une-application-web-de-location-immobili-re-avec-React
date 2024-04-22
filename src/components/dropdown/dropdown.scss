@@ -1,98 +1,91 @@
-.dropdown-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 4rem;
-
-    @media screen and (max-width: 768px) {
-        gap: 0;
-        padding-bottom: 1rem;
-    }
-}
-
 .dropdown-container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 95%;
     height: auto;
     margin-bottom: 1rem;
+    margin-left: 15rem;
+
+    width: 100%;
+
 
     @media screen and (max-width: 768px) {
         width: 100%;
         margin-bottom: 0;
+        margin-left: 0;
     }
 }
 
-.dropdown-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff6060;
-    width: 80%;
-    height: 4rem;
-    border: none;
-    border-radius: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 
-    @media screen and (max-width: 768px) {
+
+.dropdown {
+    &-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff6060;
         width: 100%;
-        height: 3rem;
-    }
-}
+        height: 4rem;
+        border: none;
+        border-radius: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
 
-.dropdown-title {
-    color: white;
-    font-size: 1.5rem;
-    font-family: "Montserrat", sans-serif;
-
-    @media screen and (max-width: 768px) {
-        font-size: 1.3rem;
-    }
-}
-
-.dropdown-arrow {
-    transition: transform 0.3s ease-in-out;
-}
-
-.rotated {
-    transform: rotate(-180deg);
-}
-
-
-.dropdown-content {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition:
-        opacity 0.5s,
-        max-height 0.5s,
-        visibility 0.5s;
-    background-color: #f6f6f6;
-    width: calc(80% - 2rem);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    padding: 1rem 1rem;
-    font-size: 1.2rem;
-
-    @media screen and (max-width: 768px) {
-        width: calc(100% - 2rem);
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 3rem;
+        }
     }
 
-    &.open {
-        visibility: visible;
-        opacity: 1;
-        max-height: 500px;
+    &-title {
+        color: white;
+        font-size: 1.5rem;
+        font-family: "Montserrat", sans-serif;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &-arrow {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .rotated {
+        transform: rotate(-180deg);
+    }
+
+    &-content {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition:
+            opacity 0.5s,
+            max-height 0.5s,
+            visibility 0.5s;
+        background-color: #f6f6f6;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 1rem 1rem;
+        font-size: 1.2rem;
+
+        @media screen and (max-width: 768px) {
+
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &.open {
+            visibility: visible;
+            opacity: 1;
+            max-height: 500px;
+            width: 93%;
+        }
+
     }
 }
-
-
 
 @keyframes slideOpen {
     0% {

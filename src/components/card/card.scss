@@ -6,10 +6,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 4rem;
-    width: 90%;
+    width: 92%;
     border-radius: 2rem;
     padding: 3rem 2rem 2rem 2rem;
-    margin-left: 5rem;
+    margin-left: 4rem;
     margin-bottom: 2rem;
 
     @media screen and (max-width: 768px) {
@@ -22,44 +22,54 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
-    }
-}
 
-.card {
-    border-radius: 10px;
-    position: relative;
-    height: 340px;
-    width: 30%;
-    transition: transform 0.2s ease-out;
+        @media screen and (max-width: 550px) {
+            margin-left: 1rem;
+        }
 
-    @media screen and (max-width: 768px) {
-        height: 255px;
-        width: 100%;
+        @media screen and (max-width: 375px) {
+            margin-left: 0.6rem;
+        }
+
     }
 
-    &:hover {
-        transform: scale(1.025);
+    &_card {
+        border-radius: 10px;
+        position: relative;
+        height: 340px;
+        width: 30%;
+        transition: transform 0.2s ease-out;
 
         @media screen and (max-width: 768px) {
-            transform: none;
+            height: 255px;
+            width: 100%;
+        }
+
+        &:hover {
+            transform: scale(1.025);
+
+            @media screen and (max-width: 768px) {
+                transform: none;
+            }
+        }
+
+        &:active {
+            transform: scale(1.015);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            pointer-events: none; // Évitez de bloquer les interactions utilisateur avec cette superposition
         }
     }
 
-    &:active {
-        transform: scale(1.015);
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        pointer-events: none; // Évitez de bloquer les interactions utilisateur avec cette superposition
-    }
 
     img {
         width: 100%;

@@ -6,7 +6,7 @@ function Dropdown({ title, content }) {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className="dropdown-container">
+        <main className="dropdown-container ">
             <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
                 <span className="dropdown-title">{title}</span>
                 <img
@@ -18,7 +18,7 @@ function Dropdown({ title, content }) {
             <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
                 {content}
             </div>
-        </div>
+        </main>
     )
 }
 

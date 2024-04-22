@@ -6,7 +6,7 @@ import Navbar from './../navBar/Navbar';
 function Header() {
     return (
         <header className='header'>
-            <img className='img_logo' src={logo} alt="Logo Kasa" />
+            <img className='header_img_logo' src={logo} alt="Logo Kasa" />
             <Navbar />
         </header>
     );

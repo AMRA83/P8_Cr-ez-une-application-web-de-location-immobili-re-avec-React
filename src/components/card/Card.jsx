@@ -7,11 +7,11 @@ function Card() {
     return (
         <div className="gallery">
             {locations.map((location) => (
-                <div className="card" key={location.id}>
+                <div className="gallery_card" key={location.id}>
                     <h2>{location.title}</h2>
                     <Link to={`/accommodation/${location.id}`}>
                         <img
-                            className="card_img"
+                            className="gallery_card_img"
                             src={location.cover}
                             alt={`Cover of ${location.title}`}
                         />
