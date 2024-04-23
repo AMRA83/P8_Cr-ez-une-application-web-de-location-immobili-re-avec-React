@@ -10,22 +10,19 @@ header {
 
 
     @media screen and (max-width:768px) {
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
         margin-bottom: 0rem;
     }
 
-    &_img_logo {
-        width: 211px;
-        height: auto;
+}
 
-        @media screen and (max-width:768px) {
-            width: 100px;
-            height: auto;
-        }
+.header_img_logo {
+    width: 211px;
+    height: auto;
 
+    @media screen and (max-width:768px) {
+        width: 135px;
 
     }
-
-
 }

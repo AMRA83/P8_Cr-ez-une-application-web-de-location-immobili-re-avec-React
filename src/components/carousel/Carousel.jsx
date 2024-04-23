@@ -29,9 +29,14 @@ function Carousel({ imageSlider }) {
     };
 
     return (
-        <section style={{ backgroundImage: `url(${imageSlider[currentIndex]})` }} className='carousel'>
-            {imageSlider.length > 1 && (
+        <div className='carousel'>
+            {imageSlider.length > 0 && (
                 <>
+                    <img
+                        className='carousel_image'
+                        src={imageSlider[currentIndex]}
+                        alt={`Slide ${currentIndex}`}
+                    />
                     <img
                         className='carousel_arrow carousel_arrow_right'
                         src={ArrowRight}
@@ -47,7 +52,7 @@ function Carousel({ imageSlider }) {
                     {isWideScreen && <p className='slideCount'>{currentIndex + 1} / {imageSlider.length}</p>}
                 </>
             )}
-        </section>
+        </div>
     );
 }
 

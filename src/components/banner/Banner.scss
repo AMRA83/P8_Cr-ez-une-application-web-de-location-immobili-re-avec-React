@@ -1,30 +1,33 @@
-.banner,
-.banner_about {
+.banner {
     position: relative;
     border-radius: 25px;
     box-shadow: 0 0 0 2px #f6f6f6;
     background-position: center;
     background-size: cover;
     height: 223px;
-    padding: 20px;
-    width: 90%;
+    width: 92%;
     margin-left: 4rem;
-
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
 
     @media screen and (max-width: 768px) {
         margin: 20px auto;
-        height: 120px;
+        width: 95%;
         justify-content: center;
+        height: 111px;
     }
 
     &_img {
         border-radius: 10px;
         width: 100%;
-        height: 111px;
+        height: 100%;
         object-fit: cover;
         filter: brightness(70%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
 
 
     }
@@ -44,32 +47,11 @@
         z-index: 2;
 
         @media screen and (max-width: 768px) {
-            font-size: 35px;
+            font-size: 20px;
             text-align: start;
             left: 35%;
             top: 35%;
         }
     }
 
-}
-
-
-.banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../banner/ImageHome.png');
-
-    &_about {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../banner/ImageAbout.jpg');
-
-        @media screen and (max-width: 768px) {
-            width: 94%;
-        }
-
-        @media screen and (max-width: 550px) {
-            width: 92%;
-        }
-
-        @media screen and (max-width: 390px) {
-            width: 90%;
-        }
-    }
 }

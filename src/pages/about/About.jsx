@@ -1,7 +1,7 @@
 import React from "react"
 import Dropdown from "../../components/dropdown/Dropdown"
 import Banner from "../../components/banner/Banner"
-import imageBannerAbout from "../../components/banner/ImageAbout.jpg"
+import imageAbout from "../../components/banner/ImageAbout.jpg"
 
 import "../about/About.scss"
 
@@ -9,10 +9,11 @@ function About() {
     return (
         <>
             <main>
-                <Banner
-                    imageSrc={imageBannerAbout}
-                    altText="Forêt et montagnes enneigées"
-                />
+                <Banner picture={imageAbout}
+                    alt="Image de montagnes"
+                    title="" />
+
+
                 <div className="about-content">
                     <Dropdown title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
                     <Dropdown title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />

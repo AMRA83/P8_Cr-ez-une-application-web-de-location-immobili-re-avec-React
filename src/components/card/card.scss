@@ -14,7 +14,7 @@
 
     @media screen and (max-width: 768px) {
         padding: 0;
-        margin-left: 1.5rem;
+        margin-left: 0.6rem;
         margin-bottom: 2rem;
         width: 94%;
         flex-direction: column;
@@ -22,16 +22,8 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
-
-        @media screen and (max-width: 550px) {
-            margin-left: 1rem;
-        }
-
-        @media screen and (max-width: 375px) {
-            margin-left: 0.6rem;
-        }
-
     }
+
 
     &_card {
         border-radius: 10px;
