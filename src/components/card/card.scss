@@ -9,7 +9,7 @@
     width: 92%;
     border-radius: 2rem;
     padding: 3rem 2rem 2rem 2rem;
-    margin-left: 4rem;
+
     margin-bottom: 2rem;
 
     @media screen and (max-width: 768px) {
@@ -24,17 +24,33 @@
         gap: 2rem;
     }
 
+    @media screen and (min-width:769px) {
+        margin-left: 2rem;
+    }
+
+    @media screen and (min-width:1024px) {
+        margin-left: 4rem;
+    }
+
 
     &_card {
         border-radius: 10px;
         position: relative;
         height: 340px;
-        width: 30%;
+
         transition: transform 0.2s ease-out;
 
         @media screen and (max-width: 768px) {
             height: 255px;
             width: 100%;
+        }
+
+        @media screen and (min-width:769px) {
+            width: 45%;
+        }
+
+        @media screen and (min-width:1024px) {
+            width: 30%;
         }
 
         &:hover {

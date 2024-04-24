@@ -1,13 +1,22 @@
 .accomodation_wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: 4rem;
-    margin-right: 4rem;
+
     margin-bottom: 1rem;
 
     @media screen and (max-width: 768px) {
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+
+    @media screen and (min-width:769px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    @media screen and (min-width:1024px) {
+        margin-left: 4rem;
+        margin-right: 4rem;
     }
 }
 
@@ -158,13 +167,21 @@
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
-    margin-left: -15rem;
+
     gap: 2rem;
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
         margin-left: 0;
         margin-bottom: 0;
+    }
+
+    @media screen and (min-width:769px) {
+        margin-left: -9rem;
+    }
+
+    @media screen and (min-width:1024px) {
+        margin-left: -15rem;
     }
 
     &_item {

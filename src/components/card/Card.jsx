@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Card() {
     return (
-        <div className="gallery">
+        <main className="gallery">
             {locations.map((location) => (
                 <div className="gallery_card" key={location.id}>
                     <h2>{location.title}</h2>
@@ -18,7 +18,7 @@ function Card() {
                     </Link>
                 </div>
             ))}
-        </div>
+        </main>
     );
 }
 

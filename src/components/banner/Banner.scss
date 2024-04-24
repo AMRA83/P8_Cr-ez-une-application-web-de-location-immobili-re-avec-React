@@ -6,7 +6,7 @@
     background-size: cover;
     height: 223px;
     width: 92%;
-    margin-left: 4rem;
+
     margin-bottom: 2rem;
 
 
@@ -15,6 +15,15 @@
         width: 95%;
         justify-content: center;
         height: 111px;
+    }
+
+    @media screen and (min-width:769px) {
+        margin-left: 2rem;
+
+    }
+
+    @media screen and (min-width:1024px) {
+        margin-left: 4rem;
     }
 
     &_img {
@@ -34,7 +43,7 @@
 
     &_title {
         position: absolute;
-        top: 50%;
+
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 38px;
@@ -43,7 +52,7 @@
         filter: drop-shadow(1px 1px 0 #000) drop-shadow(-1px -1px 0 #000);
         font-weight: bold;
         text-align: center;
-        padding: 10px;
+
         z-index: 2;
 
         @media screen and (max-width: 768px) {
@@ -51,6 +60,17 @@
             text-align: start;
             left: 35%;
             top: 35%;
+        }
+
+        @media screen and (min-width:769px) {
+            padding: 0;
+            top: 40%;
+
+        }
+
+        @media screen and (min-width:1024px) {
+            padding: 10px;
+            top: 50%;
         }
     }
 
