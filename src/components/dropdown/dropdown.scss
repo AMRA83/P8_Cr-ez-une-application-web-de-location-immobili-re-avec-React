@@ -55,13 +55,10 @@
         }
     }
 
-    &-arrow {
-        transition: transform 0.3s ease-in-out;
-    }
 
-    .rotated {
-        transform: rotate(-180deg);
-    }
+
+
+
 
     &-content {
         opacity: 0;
@@ -101,6 +98,15 @@
 
     }
 }
+
+.dropdown-arrow {
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotated {
+    transform: rotate(-180deg);
+}
+
 
 @keyframes slideOpen {
     0% {

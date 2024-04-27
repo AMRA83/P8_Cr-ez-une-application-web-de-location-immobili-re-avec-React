@@ -12,7 +12,7 @@ function Dropdown({ title, content }) {
                 <img
                     src={arrow_icon}
                     alt="Arrow Icon"
-                    className={`dropdown-arrow ${isOpen ? "rotated" : ""}`}
+                    className={`dropdown-arrow ${isOpen ? 'rotated' : ""}`}
                 />
             </button>
             <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
